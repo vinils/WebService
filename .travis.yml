@@ -4,7 +4,7 @@ node_js:
 script:
   - echo 'Build starts!!'
   - echo 'Installing Deps!'
-  - yarn
+  - npm install
   - echo 'Testing!'
 install:
   - npm install -g firebase-tools
