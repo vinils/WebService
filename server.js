@@ -1,4 +1,5 @@
 'use strict';
+const functions = require('firebase-functions');
 
 var express = require('express'),
   app = express(),
@@ -39,3 +40,5 @@ app.get('/simpliest', (req, res) => {
 app.listen(port);
 
 console.log('todo list RESTful API server started on: ' + port);
+
+exports.app = functions.https.onRequest(app);
