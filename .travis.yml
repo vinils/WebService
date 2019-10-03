@@ -6,4 +6,7 @@ script:
   - echo 'Installing Deps!'
   - yarn
   - echo 'Testing!'
-  - npm run test:prod
+install:
+  - npm install -g firebase-tools
+after_success:
+  - firebase deploy --token "rlFmla9LH+bTULXs15qb9XFd3NlNXSScZnep9EUcSy+jmFB3YkCeZH3c3wDICsUIkvllqmLatafuT3a9+g7GEO1v3NGlERFzDUyE7ikh6CVsvgx6g+ktte3f/jMIq9mjrQLkHVu66Zs91lYP56ga2XgsHE40CB6DHPXP4M27wa6Gbgy0tNWqozcQmoVjfzuWBlgFdj7X/TH4y9fIXubQncR1WJVKqGo337gul7L/Fqkie2FdkCCFPuEbXDvvdQLSoAGWA1UyvAtukCSK9QxiMuB7l64DGtX7hxXqYEOc8ZWY9Mgzp+SEH3qbwVLVXcta6i0/4tH1KXSFMmcii0nN9ELZc2Yi5b51j5vpSYEOqoV4MegiZo9xDDyTqKefl4vIxnjA9ZA6+2l2lguBQ0yIOWDvBQ+6YrUk3e8DrnDl7N9k4yjrX/H97H+wIGPvI8CuuJuCaX5CqZW3Zy5M3csQDgPrD9g7tgB1JYejpkHRxXBOV9GqXpHGglMTa06mhhpInh/E9p4BboVlfmIGxmzL0SUpsHtnyVwgOTost8WpZB4/lmHQa4uTiCU8Ip2JMKgh7zNBbXwPIzQbcNzh2zMDuEt47tlzkd1x4w3fTo2UsHK3RLR/uhro3xPkjaBbG5ypBLt4FgppFyqdBkb/cpALHIdr7JNulRo5lAHaE/rkK4M="
