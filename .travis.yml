@@ -13,5 +13,4 @@ install: npm install
 script:
   - echo 'Testing!'
   - npm test
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-scanner
+after_success: npm run coverage
