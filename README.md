@@ -1,6 +1,8 @@
 # WebService
 
 [![Build Status](https://travis-ci.org/vinils/WebService.svg?branch=master)](https://travis-ci.org/vinils/WebService)
+<BR>
+Docker build - https://cloud.docker.com/repository/registry-1.docker.io/vinils/webservice/builds
 
 **Node**
 - npm install
