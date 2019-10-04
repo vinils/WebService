@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/vinils/WebService#readme",
   "devDependencies": {
-    "coveralls": "^3.0.6",
     "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.6",
+    "mocha": "^6.2.1",
     "nodemon": "^1.19.3",
-    "mocha": "^6.2.1"
+    "nyc": "^14.1.1"
   },
   "dependencies": {
     "body-parse": "^0.1.0",

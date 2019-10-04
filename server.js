@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 //  .delete(todoList.delete_a_task);
 
 app.get('/simpliest', (req, res) => {
-  var example = {
+  const example = {
     "variable" : "temperature",
     "fields" : {
       "value" : 34.32,
@@ -40,3 +40,4 @@ app.listen(port);
 
 console.log('todo list RESTful API server started on: ' + port);
 
+module.exports = app;
