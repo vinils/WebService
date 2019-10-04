@@ -4,12 +4,14 @@ node_js:
 cache:
   directories:
     - "node_modules"
+addons:
+  sonarcloud:
+    organization: "vinils"
+    token:
+      secure: "T7dRB4Vx+9D+4PrVQN2LlQHjyVjNiHxxTaa1hlcaTfE1WF7u+b845w6e8fntH/xnWuWBGcmO/uKAX8zkzXyPoDFw/EiqtVbqbpXVgRsHDuymCndiVcnonNKtdHKuCAlSb8Ns0mN/oJ9DzpY8VRX6n8R4bVvsxXYadMVdnnJKrYNs6hmkOxsf932rHaXyz6IdEYaaZg1IY8fysnzK+2pl69/i8SWvsH9JXTZg+ksnmgd82InZAPo+7w8vPffZe0I46OMiGZgFML667acLlg3gj9aeol3edJwjP1xB0AfECEX1VGHNHLu7wm1srrhCicrwnvz2iUYJ88vnYD5OOd8ABqgVa9k8teyX2yOcBa8iluR32cw+bU3ASsNT2Uo8uu3liLrJg0X8GExvc3BnmhZ4MC2ncKtbuJMuD12Iuxvnq7t/0PbdtrXkB8adVXU2HAfszBH9BIkLxCdC713Jn1FPM/YGLzeCBoBFrsxuN5MepvPAndLW0EDwsFyBB6bC0DDTKsNgIrJk4sSgRPjiuSlvHBdkcsCxqs14Z/L7HkqnLGd/E97xSJpdSwpo7jG3ABv9TUvW0x0+jh6I38otzrbuN0RR8qGreAjUrQhIqMfsa54PpYnqLnxtIPVO687UAybGGswaPBdXRtfXbfue7XTk/H5wOL3RQYthshvh7nTy/NY=" # encrypted value of your token
 install: npm install
 script:
   - echo 'Testing!'
   - npm test
-install:
-  - npm install -g firebase-tools
-after_success:
-  - npm run coverage
-  - firebase deploy --token "F/Ep7r5zxQ80XOMh8tcvRJFGmnVAa9lwgFBzsDC2OR9mY+X6zDzqQ1Wa8xNHT3xvy/DZF96vWwZ4ncpf81BTPMcq1a8UFUnaf0vk6oxOgnTroQy6or1P+p6KATilHntcZTDEwFRy+s0uBhviKXzSwVFT8U2rJtqhbpw4TY+0MtfDmafNRViyPTYYsuSi/mswxPYsp6w+JSSrGyeDx/8y/OBGghJEYizkpEZcCkzQqRfTRNAynTpv7kzpQhoGCVyWCVENwH1/EQf0kR85PlTUSJTRKVwpaRDdf08RPUF49osB4YyYIc7GimBczfdI74+kPCr40HWzQ1D6Jf5j0g3bazvXeBU1vd9FqsrSyvfbS56nsSOGJ9JlzL6k3s8HvwoFzgR5YWJovNzdlaJj+ZyG+N+nJTbiBUm7GaMyGbAfo9L86yoVwG3KqA1ronh+VV9n4T/NmM/hJLblMMzwBeui9jfQnOJnJFxFs4XlxvwCNdJLatFyjOPdqzuPwQziXHM2tzAZam5y9mKXk+8msiKSSdhPtP7irqywP3NVzHQRnIT+Lh9HAbUd8bA3y70tWOrLZwLT2/7AUsimgxM9o3nm+3Nk9aIosWbCTHweoE5GbITwReaDVv9OZuoouDq+uKuw4O+NDOHbRdzxzDPs+Vln+1RNcBdu8DgF5+rfOG65e/4="
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
