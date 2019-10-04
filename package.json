@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "cover": "nyc mocha",
-    "test": "nyc --reporter=html --reporter=text mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
-},
+    "cover": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test2": "nyc --reporter=html --reporter=text mocha --timeout=3000 --exit",
+    "test": "nyc --reporter=html --reporter=text mocha --timeout=3000 --exit | coveralls",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coverage2": "coveralls"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vinils/WebService.git"
@@ -24,7 +26,9 @@
     "chai-http": "^4.3.0",
     "coveralls": "^3.0.6",
     "istanbul": "^0.4.5",
+    "jest": "^24.9.0",
     "mocha": "^6.2.1",
+    "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.19.3",
     "nyc": "^14.1.1"
   },
