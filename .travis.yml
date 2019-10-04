@@ -4,12 +4,7 @@ node_js:
 cache:
   directories:
     - "node_modules"
-addons:
-  sonarcloud:
-    organization: "vinils"
-    token:
-      secure: "T7dRB4Vx+9D+4PrVQN2LlQHjyVjNiHxxTaa1hlcaTfE1WF7u+b845w6e8fntH/xnWuWBGcmO/uKAX8zkzXyPoDFw/EiqtVbqbpXVgRsHDuymCndiVcnonNKtdHKuCAlSb8Ns0mN/oJ9DzpY8VRX6n8R4bVvsxXYadMVdnnJKrYNs6hmkOxsf932rHaXyz6IdEYaaZg1IY8fysnzK+2pl69/i8SWvsH9JXTZg+ksnmgd82InZAPo+7w8vPffZe0I46OMiGZgFML667acLlg3gj9aeol3edJwjP1xB0AfECEX1VGHNHLu7wm1srrhCicrwnvz2iUYJ88vnYD5OOd8ABqgVa9k8teyX2yOcBa8iluR32cw+bU3ASsNT2Uo8uu3liLrJg0X8GExvc3BnmhZ4MC2ncKtbuJMuD12Iuxvnq7t/0PbdtrXkB8adVXU2HAfszBH9BIkLxCdC713Jn1FPM/YGLzeCBoBFrsxuN5MepvPAndLW0EDwsFyBB6bC0DDTKsNgIrJk4sSgRPjiuSlvHBdkcsCxqs14Z/L7HkqnLGd/E97xSJpdSwpo7jG3ABv9TUvW0x0+jh6I38otzrbuN0RR8qGreAjUrQhIqMfsa54PpYnqLnxtIPVO687UAybGGswaPBdXRtfXbfue7XTk/H5wOL3RQYthshvh7nTy/NY=" # encrypted value of your token
 install: npm install
 script:
   - echo 'Testing!'
-after_success: npm run cover
+  - npm test
