@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "debug": "nodemon server.js",
+    "debug": "./node_modules/.bin/eslint *.js & nodemon server.js",
     "test": "nyc mocha --exit"
   },
   "repository": {
@@ -21,12 +21,16 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "mocha": "^6.2.1",
     "nodemon": "^1.19.3",
     "nyc": "^14.1.1"
   },
   "dependencies": {
     "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1"
   },
   "engines": {
