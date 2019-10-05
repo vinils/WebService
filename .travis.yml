@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
     - "node_modules"
+env:
+  - CODECLIMATE_REPO_TOKEN=ae5871de545acde8ef5261dc4f2a7519fc47ea5d8f8200bf0f12af4fa39c04b2
 install: 
   - npm install
 script:
