@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/vinils/WebService.svg?branch=master)](https://travis-ci.org/vinils/WebService)
 [![Coverage Status](https://coveralls.io/repos/github/vinils/WebService/badge.svg?branch=master)](https://coveralls.io/github/vinils/WebService?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2cad9fc891706379eeae/maintainability)](https://codeclimate.com/github/vinils/WebService/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/2cad9fc891706379eeae/test_coverage)](https://codeclimate.com/github/vinils/WebService/test_coverage)
 <a href="https://hub.docker.com/r/vinils/webservice/builds" target="_blank">Docker Builds</a>
   
  
