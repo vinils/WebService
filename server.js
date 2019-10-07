@@ -8,18 +8,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// var simpliestPoint = require('./controllers/simpliest');
-
-// routes
-// app.route('/simpliest')
-//  .get(simpliestPoint.list_all_tasks)
-//  .post(todoList.create_a_task);
-// app.route('/tasks/:taskId')
-//  .get(todoList.read_a_task)
-//  .put(todoList.update_a_task)
-//  .delete(todoList.delete_a_task);
-
-app.get('/simpliest', (req, res) => {
+app
+.get('/simpliest', (req, res) => {
   const example = {
     variable: 'temperature',
     fields: {
@@ -34,10 +24,10 @@ app.get('/simpliest', (req, res) => {
   };
 
   res.json(example);
-});
+})
 
 app.listen(port);
 
-console.log(`todo list RESTful API server started on: ${port}`);
+console.log(`RESTful API server started on: ${port}`);
 
 module.exports = app;
