@@ -28,4 +28,23 @@ describe('test', () => {
         done();
       });
   });
+
+  it('It should post simples json and return', (done) => {
+    const simpleJson = {
+      title: 'Awesome book',
+      price: '$9.99',
+      description: 'This is the awesome book'
+    };
+
+    chai.request(server)
+      .post('/simpliest')
+      .set('Accept', 'application/json')
+      .send(simpleJson)
+      .end((err, res) => {
+        expect(res.status).to.equal(200);
+        expect(res).to.be.json;
+        expect(res.body).to.include(simpleJson);
+        done();
+      });
+  });
 });
