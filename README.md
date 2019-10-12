@@ -18,3 +18,4 @@
 
 **URIs**
 - GET /simpliest
+- POST /simpliest (body:{Json})
