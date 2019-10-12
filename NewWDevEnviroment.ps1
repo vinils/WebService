@@ -1,8 +1,9 @@
-Write-Host "install chocolatey"
+Write-Host "installing chocolatey"
 iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 Write-Host "Installing Git"
 choco install -y --no-progress git
-git config --global http.proxy 159.215.124.20:443
+Write-Host "run cmd 'git config --global http.proxy 159.215.124.20:443' in a new cmd prompt"
+pause
 Write-Host "Installing VSCode"
 choco install vscode -y --limit-output --no-progress --params "/NoDesktopIcon /NoQuicklaunchIcon /NoContextMenuFiles /NoContextMenuFolders"
 Write-Host "Installing docker for windows"
