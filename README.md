@@ -19,3 +19,6 @@
 **URIs**
 - GET /simpliest
 - POST /simpliest (body:{Json})
+
+**Set up development enviroment**
+- For windows run in powershell: NewWDevEnviroment.ps1
